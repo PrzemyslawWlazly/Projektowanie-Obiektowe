@@ -7,3 +7,6 @@ losowania: od, do, ile
 
 Wszystko znajduje się w jednym pliku obrazu
  [link do obrazu](https://hub.docker.com/r/przemyslawwlazly/pascal-app)  
+
+
+ Kod: [link do zadania 1](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/tree/main/projekt_1)  
