@@ -1,0 +1,14 @@
+Zadanie 1
+
+✅ 3.0 Procedura do generowania 50 losowych liczb od 0 do 100   
+✅ 3.5 Procedura do sortowania liczb  
+✅ 4.0 Dodanie parametrów do procedury losującej określającymi zakres  
+losowania: od, do, ile  
+✅ 4.5 5 testów jednostkowych testujące procedury  
+✅ 5.0 Skrypt w bashu do uruchamiania aplikacji w Pascalu via docker  
+
+Wszystko znajduje się w jednym pliku obrazu
+ [link do obrazu](https://hub.docker.com/r/przemyslawwlazly/pascal-app)  
+
+
+ Kod: [link do zadania 1](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/tree/main/projekt_1)  
