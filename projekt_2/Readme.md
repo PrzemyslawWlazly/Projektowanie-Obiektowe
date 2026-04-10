@@ -32,3 +32,14 @@
    `symfony server:start -d`
 4. **Uruchomienie testów API (cURL):**
    `./testy/test_api.sh`
+
+
+
+
+<img width="686" height="296" alt="Screenshot from 2026-04-10 23-09-41" src="https://github.com/user-attachments/assets/7463b5c5-ec6e-44aa-b9ea-c84310370c71" />
+
+<img width="686" height="296" alt="Screenshot from 2026-04-10 23-09-45" src="https://github.com/user-attachments/assets/073a8c8b-fd33-4dc3-9d69-3aa7be2d4a1e" />
+
+<img width="686" height="296" alt="Screenshot from 2026-04-10 23-09-48" src="https://github.com/user-attachments/assets/c2a49e02-3cc7-469a-85ba-466a97982ad2" />
+
+
