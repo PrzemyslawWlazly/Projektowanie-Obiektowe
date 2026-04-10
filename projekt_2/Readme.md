@@ -42,4 +42,7 @@
 
 <img width="686" height="296" alt="Screenshot from 2026-04-10 23-09-48" src="https://github.com/user-attachments/assets/c2a49e02-3cc7-469a-85ba-466a97982ad2" />
 
+[Screencast from 2026-04-10 23-51-28.webm](https://github.com/user-attachments/assets/d8f1b331-5247-476d-94ff-d06900c6d1f2)
+
+
 
