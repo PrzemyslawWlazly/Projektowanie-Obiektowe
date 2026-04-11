@@ -52,5 +52,8 @@ Testowanie autoryzacji z Singletonem Lazy (Punkt 5.0):
 
     (Przy pierwszym wywołaniu endpointu Lazy, w oknie terminala z uruchomionym serwerem pojawi się komunikat o utworzeniu nowej instancji serwisu).
 
-[Screencast from 2026-04-11 19-23-33.webm](https://github.com/user-attachments/assets/51b0d4f5-c7a3-4b79-88a8-623d9c318917)
+[FILM ](https://github.com/user-attachments/assets/51b0d4f5-c7a3-4b79-88a8-623d9c318917)
+  
+  
+oraz SCREEN  
 <img width="1642" height="566" alt="Screenshot from 2026-04-11 19-24-48" src="https://github.com/user-attachments/assets/fa284de6-16bd-4197-b0d3-9e98ac6b5724" />
