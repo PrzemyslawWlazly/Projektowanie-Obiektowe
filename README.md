@@ -171,6 +171,7 @@ Zadanie 5 Wzorce behawioralne - React JavaScript/TypeScript
 [link do obrazu Frontend na Docker Hub](https://hub.docker.com/r/przemyslawwlazly/zestaw5-frontend) | [link do obrazu Backend na Docker Hub](https://hub.docker.com/r/przemyslawwlazly/zestaw5-backend) | [kod rozwiązania: client.js](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_5/frontend/src/api/client.js), [AppContext.js](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_5/frontend/src/context/AppContext.js), [Payments.js](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_5/frontend/src/components/Payments.js), [main.go](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_5/backend/main.go)
 
 
+[PObiekt_zest5.webm](https://github.com/user-attachments/assets/8b4ff783-b35d-4674-8110-3292684d322a)
 
 
 
