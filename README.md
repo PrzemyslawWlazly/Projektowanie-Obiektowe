@@ -148,27 +148,27 @@ Testowanie autoryzacji z Singletonem Lazy (Punkt 5.0):
 
 <img width="1639" height="976" alt="Screenshot from 2026-04-11 22-24-15" src="https://github.com/user-attachments/assets/9215230b-b8c7-4f4d-9e89-7eda17cf518c" />
 
-----------------------------------------
-
 
 -----------------------------------------
-Zadanie 5 (Oddane jako zadanie 5 dla przedmiotu EBiznes 11.04)
 
-# Zadanie 5 Frontend
+Zadanie 5 Wzorce behawioralne - React JavaScript/TypeScript
 
-✅ **3.0** W ramach projektu stworzono dwa komponenty: Produkty oraz Płatności. Komponent [Products.js](https://github.com/PrzemyslawWlazly/EBiznes/blob/main/zestaw_5/frontend/src/components/Products.js) pobiera dane o asortymencie, natomiast [Payments.js](https://github.com/PrzemyslawWlazly/EBiznes/blob/main/zestaw_5/frontend/src/components/Payments.js) wysyła dane o płatnościach do serwera.
+[Link do głównego folderu zadania 5](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/tree/main/zadanie_5)
 
-✅ **3.5** Dodano komponent [Cart.js](https://github.com/PrzemyslawWlazly/EBiznes/blob/main/zestaw_5/frontend/src/components/Cart.js) (Koszyk) wraz z dedykowanym widokiem. Do nawigacji między podstronami wykorzystano bibliotekę `react-router-dom`, skonfigurowaną w pliku [App.js](https://github.com/PrzemyslawWlazly/EBiznes/blob/main/zestaw_5/frontend/src/App.js).
+✅ **3.0 W ramach projektu należy stworzyć komponenty Produkty oraz Płatności; komponent Produkty powinien pobierać listę produktów z aplikacji serwerowej, natomiast komponent Płatności powinien wysyłać dane płatności do aplikacji serwerowej**  
+[link do obrazu Frontend na Docker Hub](https://hub.docker.com/r/przemyslawwlazly/zestaw5-frontend) | [link do obrazu Backend na Docker Hub](https://hub.docker.com/r/przemyslawwlazly/zestaw5-backend) | [kod rozwiązania: Products.js](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_5/frontend/src/components/Products.js), [Payments.js](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_5/frontend/src/components/Payments.js), [AppContext.js](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_5/frontend/src/context/AppContext.js), [client.js](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_5/frontend/src/api/client.js), [main.go](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_5/backend/main.go)
 
-✅ **4.0** Dane pomiędzy wszystkimi komponentami (produkty, stan koszyka, suma płatności) są przesyłane za pomocą React Hooks oraz Context API, co zostało zaimplementowane w pliku [AppContext.js](https://github.com/PrzemyslawWlazly/EBiznes/blob/main/zestaw_5/frontend/src/context/AppContext.js).
+✅ **3.5 Należy dodać komponent Koszyk wraz z osobnym widokiem; aplikacja powinna umożliwiać przechodzenie pomiędzy widokami przy użyciu routingu**  
+[link do obrazu Frontend na Docker Hub](https://hub.docker.com/r/przemyslawwlazly/zestaw5-frontend) | [kod rozwiązania: Cart.js](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_5/frontend/src/components/Cart.js), [App.js](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_5/frontend/src/App.js)
 
-✅ **4.5** Przygotowano skrypt [docker-compose.yml](https://github.com/PrzemyslawWlazly/EBiznes/blob/main/zestaw_5/docker-compose.yml), który automatycznie buduje i uruchamia aplikację serwerową (Go) oraz kliencką (React).
-- [Link do obrazu Frontend](https://hub.docker.com/r/przemyslawwlazly/esy-floresy-frontend)
-- [Link do obrazu Backend](https://hub.docker.com/r/przemyslawwlazly/esy-floresy-backend)
+✅ **4.0 Dane pomiędzy komponentami, takimi jak Produkty, Koszyk i Płatności, powinny być przekazywane z wykorzystaniem React hooks, np. useState, useEffect lub useContext**  
+[link do obrazu Frontend na Docker Hub](https://hub.docker.com/r/przemyslawwlazly/zestaw5-frontend) | [kod rozwiązania: AppContext.js](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_5/frontend/src/context/AppContext.js), [Products.js](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_5/frontend/src/components/Products.js), [Cart.js](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_5/frontend/src/components/Cart.js), [Payments.js](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_5/frontend/src/components/Payments.js)
 
-❌ **5.0** Aplikacja serwerowa w języku Go nie została wyposażona w nagłówki obsługujące CORS 
+✅ **4.5 Należy przygotować konfigurację umożliwiającą uruchomienie aplikacji klienckiej oraz serwerowej w kontenerach Docker za pomocą docker-compose**  
+[link do obrazu Frontend na Docker Hub](https://hub.docker.com/r/przemyslawwlazly/zestaw5-frontend) | [link do obrazu Backend na Docker Hub](https://hub.docker.com/r/przemyslawwlazly/zestaw5-backend) | [kod rozwiązania: docker-compose.yml](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_5/docker-compose.yml), [frontend/Dockerfile](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_5/frontend/Dockerfile), [backend/Dockerfile](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_5/backend/Dockerfile)
 
-[Link do całego zadania 5](https://github.com/PrzemyslawWlazly/EBiznes/tree/main/zestaw_5)
+✅ **5.0 Należy wykorzystać bibliotekę axios do komunikacji z serwerem oraz skonfigurować obsługę CORS, aby frontend mógł poprawnie komunikować się z backendem**  
+[link do obrazu Frontend na Docker Hub](https://hub.docker.com/r/przemyslawwlazly/zestaw5-frontend) | [link do obrazu Backend na Docker Hub](https://hub.docker.com/r/przemyslawwlazly/zestaw5-backend) | [kod rozwiązania: client.js](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_5/frontend/src/api/client.js), [AppContext.js](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_5/frontend/src/context/AppContext.js), [Payments.js](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_5/frontend/src/components/Payments.js), [main.go](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_5/backend/main.go)
 
 
 
