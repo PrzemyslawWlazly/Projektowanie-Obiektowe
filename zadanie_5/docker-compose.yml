@@ -1,0 +1,14 @@
+services: # Rozpoczynamy listę usług uruchamianych wspólnie dla frontendu i backendu.
+  backend: # Definiujemy usługę aplikacji serwerowej napisanej w Go.
+    build: ./backend # Budujemy obraz backendu na podstawie pliku backend/Dockerfile.
+    ports: # Otwieramy listę mapowań portów dla backendu.
+      - "8080:8080" # Udostępniamy API backendu na porcie 8080 hosta i kontenera.
+  frontend: # Definiujemy usługę aplikacji klienckiej napisanej w React.
+    build: ./frontend # Budujemy obraz frontendu na podstawie pliku frontend/Dockerfile.
+    environment: # Przekazujemy zmienne środowiskowe do procesu Reacta.
+      - HOST=0.0.0.0 # Pozwalamy serwerowi deweloperskiemu Reacta nasłuchiwać poza wnętrzem kontenera.
+      - REACT_APP_API_URL=http://localhost:8080 # Ustawiamy adres API widoczny dla przeglądarki użytkownika.
+    ports: # Otwieramy listę mapowań portów dla frontendu.
+      - "3000:3000" # Udostępniamy aplikację React na porcie 3000 hosta i kontenera.
+    depends_on: # Definiujemy zależność startową między frontendem i backendem.
+      - backend # Uruchamiamy backend przed frontendem, aby API było dostępne dla aplikacji klienckiej.
