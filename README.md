@@ -173,4 +173,5 @@ Zadanie 5 Wzorce behawioralne - React JavaScript/TypeScript
 
 
 
-[EBiznes_zestaw5.webm](https://github.com/user-attachments/assets/d96a3c2c-6581-4abd-a75c-ff8f781f137d)
+[Obiektowe_zest5_50.webm](https://github.com/user-attachments/assets/3c7a9731-25df-4c39-bc46-2dd19601b96e)
+
