@@ -256,5 +256,10 @@ Poprawki:
 * [Kontroler podglądu danych Redis: RedisController.swift](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_7/Sources/App/Controllers/RedisController.swift)
 * [Widok danych Redis: redis/index.leaf](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_7/Resources/Views/redis/index.leaf)
 
+
+
+
+[Obiektowe_zest7_45.webm](https://github.com/user-attachments/assets/6782584e-4f3c-4a13-bb1d-5113dfcc2579)
+
 ❌ **5.0 Wrzucić aplikację na Heroku**
 * *(Nie zrealizowano)*
