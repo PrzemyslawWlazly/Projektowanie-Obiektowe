@@ -1,0 +1,46 @@
+<!doctype html> <!-- Deklarujemy dokument HTML5. -->
+<html lang="pl"> <!-- Ustawiamy jezyk strony na polski. -->
+<head> <!-- Sekcja head przechowuje metadane. -->
+    <meta charset="utf-8"> <!-- Ustawiamy kodowanie UTF-8. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Dbamy o responsywnosc strony. -->
+    <title>Produkty</title> <!-- Tytul karty przegladarki. -->
+    <style>body{font-family:Arial,sans-serif;max-width:1100px;margin:40px auto;padding:0 20px;line-height:1.5}nav a,.button,button{display:inline-block;margin:4px 6px 4px 0;padding:7px 10px;border:1px solid #333;text-decoration:none;color:#111;background:#f4f4f4;cursor:pointer}table{width:100%;border-collapse:collapse;margin-top:16px}td,th{border:1px solid #ccc;padding:8px;text-align:left}form{display:inline}</style> <!-- Prosty styl tabeli i przyciskow. -->
+</head> <!-- Konczymy sekcje head. -->
+<body> <!-- Rozpoczynamy widoczna zawartosc strony. -->
+    <h1>Produkty</h1> <!-- Naglowek informuje, ze jestesmy na liscie produktow. -->
+    <nav> <!-- Nawigacja pozwala przechodzic miedzy widokami. -->
+        <a href="/">Start</a> <!-- Link wraca na strone glowna. -->
+        <a href="/products/new">Dodaj produkt</a> <!-- Link otwiera formularz tworzenia produktu. -->
+        <a href="/categories">Kategorie</a> <!-- Link prowadzi do listy kategorii. -->
+        <a href="/redis">Redis</a> <!-- Link prowadzi do podgladu Redis. -->
+    </nav> <!-- Konczymy nawigacje. -->
+    <table> <!-- Tabela prezentuje wszystkie produkty. -->
+        <thead> <!-- Naglowek tabeli opisuje kolumny. -->
+            <tr> <!-- Jeden wiersz naglowka tabeli. -->
+                <th>Nazwa</th> <!-- Kolumna nazwy produktu. -->
+                <th>Kategoria</th> <!-- Kolumna kategorii produktu. -->
+                <th>Cena</th> <!-- Kolumna ceny produktu. -->
+                <th>Magazyn</th> <!-- Kolumna stanu magazynowego. -->
+                <th>Akcje</th> <!-- Kolumna przyciskow CRUD. -->
+            </tr> <!-- Konczymy wiersz naglowka. -->
+        </thead> <!-- Konczymy naglowek tabeli. -->
+        <tbody> <!-- Cialo tabeli zawiera produkty z bazy. -->
+            #for(product in products): <!-- Leaf powtarza wiersz dla kazdego produktu. -->
+            <tr> <!-- Rozpoczynamy wiersz jednego produktu. -->
+                <td>#(product.name)</td> <!-- Wyswietlamy nazwe produktu. -->
+                <td>#(product.categoryName)</td> <!-- Wyswietlamy nazwe kategorii. -->
+                <td>#(product.price)</td> <!-- Wyswietlamy cene produktu. -->
+                <td>#(product.stock)</td> <!-- Wyswietlamy stan magazynowy. -->
+                <td> <!-- W tej komorce umieszczamy akcje CRUD. -->
+                    <a class="button" href="/products/#(product.id)">Szczegoly</a> <!-- Link pokazuje produkt. -->
+                    <a class="button" href="/products/#(product.id)/edit">Edytuj</a> <!-- Link otwiera edycje produktu. -->
+                    <form method="post" action="/products/#(product.id)/delete"> <!-- Formularz usuwa produkt metoda POST. -->
+                        <button type="submit">Usun</button> <!-- Przycisk uruchamia usuwanie. -->
+                    </form> <!-- Konczymy formularz usuwania. -->
+                </td> <!-- Konczymy komorke akcji. -->
+            </tr> <!-- Konczymy wiersz produktu. -->
+            #endfor <!-- Konczymy petle Leaf. -->
+        </tbody> <!-- Konczymy cialo tabeli. -->
+    </table> <!-- Konczymy tabele produktow. -->
+</body> <!-- Konczymy widoczna zawartosc strony. -->
+</html> <!-- Konczymy dokument HTML. -->

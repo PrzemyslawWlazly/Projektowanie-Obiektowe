@@ -1,0 +1,19 @@
+<!doctype html> <!-- Deklarujemy dokument HTML5. -->
+<html lang="pl"> <!-- Ustawiamy jezyk strony na polski. -->
+<head> <!-- Sekcja head zawiera metadane. -->
+    <meta charset="utf-8"> <!-- Ustawiamy kodowanie UTF-8. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Ustawiamy responsywnosc strony. -->
+    <title>#(supplier.name)</title> <!-- Tytul strony to nazwa dostawcy. -->
+    <style>body{font-family:Arial,sans-serif;max-width:760px;margin:40px auto;padding:0 20px;line-height:1.5}a,button{display:inline-block;margin:6px 8px 6px 0;padding:8px 12px;border:1px solid #333;text-decoration:none;color:#111;background:#f4f4f4;cursor:pointer}form{display:inline}</style> <!-- Prosty styl szczegolow dostawcy. -->
+</head> <!-- Konczymy sekcje head. -->
+<body> <!-- Rozpoczynamy tresc strony. -->
+    <h1>#(supplier.name)</h1> <!-- Wyswietlamy nazwe dostawcy. -->
+    <p><strong>Email:</strong> #(supplier.email)</p> <!-- Wyswietlamy email dostawcy. -->
+    <p><strong>Telefon:</strong> #(supplier.phone)</p> <!-- Wyswietlamy telefon dostawcy. -->
+    <a href="/suppliers">Wroc</a> <!-- Link wraca do listy dostawcow. -->
+    <a href="/suppliers/#(supplier.id)/edit">Edytuj</a> <!-- Link otwiera edycje dostawcy. -->
+    <form method="post" action="/suppliers/#(supplier.id)/delete"> <!-- Formularz usuwa dostawce. -->
+        <button type="submit">Usun</button> <!-- Przycisk usuwa dostawce. -->
+    </form> <!-- Konczymy formularz usuwania. -->
+</body> <!-- Konczymy tresc strony. -->
+</html> <!-- Konczymy dokument HTML. -->

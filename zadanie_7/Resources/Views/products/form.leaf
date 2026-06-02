@@ -1,0 +1,34 @@
+<!doctype html> <!-- Deklarujemy dokument HTML5. -->
+<html lang="pl"> <!-- Ustawiamy jezyk dokumentu na polski. -->
+<head> <!-- Sekcja head zawiera metadane. -->
+    <meta charset="utf-8"> <!-- Ustawiamy kodowanie UTF-8. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Ustawiamy poprawna szerokosc na urzadzeniach mobilnych. -->
+    <title>#(title)</title> <!-- Tytul strony pochodzi z kontekstu kontrolera. -->
+    <style>body{font-family:Arial,sans-serif;max-width:760px;margin:40px auto;padding:0 20px;line-height:1.5}a,button{display:inline-block;margin:6px 8px 6px 0;padding:8px 12px;border:1px solid #333;text-decoration:none;color:#111;background:#f4f4f4;cursor:pointer}label{font-weight:bold}input,textarea,select{width:100%;padding:8px;margin:4px 0 14px;box-sizing:border-box}</style> <!-- Prosty styl formularza. -->
+</head> <!-- Konczymy sekcje head. -->
+<body> <!-- Rozpoczynamy tresc strony. -->
+    <h1>#(title)</h1> <!-- Wyswietlamy tytul formularza. -->
+    <nav> <!-- Nawigacja pozwala wrocic do listy. -->
+        <a href="/products">Produkty</a> <!-- Link wraca do produktow. -->
+        <a href="/categories">Kategorie</a> <!-- Link prowadzi do kategorii. -->
+    </nav> <!-- Konczymy nawigacje. -->
+    <form method="post" action="#(action)"> <!-- Formularz wysyla dane produktu do kontrolera. -->
+        <label for="name">Nazwa</label> <!-- Etykieta pola nazwy. -->
+        <input id="name" name="name" value="#(name)" required> <!-- Pole nazwy produktu. -->
+        <label for="description">Opis</label> <!-- Etykieta pola opisu. -->
+        <textarea id="description" name="description" required>#(description)</textarea> <!-- Pole opisu produktu. -->
+        <label for="price">Cena</label> <!-- Etykieta pola ceny. -->
+        <input id="price" name="price" type="number" step="0.01" value="#(price)" required> <!-- Pole ceny produktu. -->
+        <label for="stock">Stan magazynowy</label> <!-- Etykieta pola magazynu. -->
+        <input id="stock" name="stock" type="number" value="#(stock)" required> <!-- Pole stanu magazynowego. -->
+        <label for="categoryID">Kategoria</label> <!-- Etykieta pola kategorii. -->
+        <select id="categoryID" name="categoryID"> <!-- Lista wyboru laczy produkt z kategoria. -->
+            <option value="">Brak kategorii</option> <!-- Opcja pozwala zostawic produkt bez kategorii. -->
+            #for(category in categories): <!-- Leaf tworzy opcje dla kazdej kategorii z bazy. -->
+            <option value="#(category.id)" #if(category.isSelected):selected#endif> #(category.name)</option> <!-- Opcja kategorii moze byc zaznaczona przy edycji. -->
+            #endfor <!-- Konczymy petle kategorii. -->
+        </select> <!-- Konczymy liste wyboru kategorii. -->
+        <button type="submit">#(submitLabel)</button> <!-- Przycisk zapisuje formularz. -->
+    </form> <!-- Konczymy formularz produktu. -->
+</body> <!-- Konczymy tresc strony. -->
+</html> <!-- Konczymy dokument HTML. -->

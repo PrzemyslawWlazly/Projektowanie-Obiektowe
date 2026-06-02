@@ -1,0 +1,43 @@
+<!doctype html> <!-- Deklarujemy dokument HTML5. -->
+<html lang="pl"> <!-- Ustawiamy jezyk strony na polski. -->
+<head> <!-- Sekcja head zawiera metadane. -->
+    <meta charset="utf-8"> <!-- Ustawiamy kodowanie UTF-8. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Ustawiamy responsywnosc strony. -->
+    <title>Kategorie</title> <!-- Tytul strony kategorii. -->
+    <style>body{font-family:Arial,sans-serif;max-width:960px;margin:40px auto;padding:0 20px;line-height:1.5}nav a,.button,button{display:inline-block;margin:4px 6px 4px 0;padding:7px 10px;border:1px solid #333;text-decoration:none;color:#111;background:#f4f4f4;cursor:pointer}table{width:100%;border-collapse:collapse;margin-top:16px}td,th{border:1px solid #ccc;padding:8px;text-align:left}form{display:inline}</style> <!-- Prosty styl tabeli kategorii. -->
+</head> <!-- Konczymy sekcje head. -->
+<body> <!-- Rozpoczynamy tresc strony. -->
+    <h1>Kategorie</h1> <!-- Naglowek listy kategorii. -->
+    <nav> <!-- Nawigacja pozwala przechodzic po aplikacji. -->
+        <a href="/">Start</a> <!-- Link wraca na strone glowna. -->
+        <a href="/categories/new">Dodaj kategorie</a> <!-- Link otwiera formularz nowej kategorii. -->
+        <a href="/products">Produkty</a> <!-- Link prowadzi do produktow. -->
+    </nav> <!-- Konczymy nawigacje. -->
+    <table> <!-- Tabela prezentuje kategorie. -->
+        <thead> <!-- Naglowek tabeli. -->
+            <tr> <!-- Wiersz naglowka. -->
+                <th>Nazwa</th> <!-- Kolumna nazwy kategorii. -->
+                <th>Opis</th> <!-- Kolumna opisu kategorii. -->
+                <th>Liczba produktow</th> <!-- Kolumna liczby produktow w relacji. -->
+                <th>Akcje</th> <!-- Kolumna akcji CRUD. -->
+            </tr> <!-- Konczymy wiersz naglowka. -->
+        </thead> <!-- Konczymy naglowek tabeli. -->
+        <tbody> <!-- Cialo tabeli zawiera dane z bazy. -->
+            #for(category in categories): <!-- Leaf powtarza wiersz dla kazdej kategorii. -->
+            <tr> <!-- Rozpoczynamy wiersz kategorii. -->
+                <td>#(category.name)</td> <!-- Wyswietlamy nazwe kategorii. -->
+                <td>#(category.description)</td> <!-- Wyswietlamy opis kategorii. -->
+                <td>#(category.productsCount)</td> <!-- Wyswietlamy liczbe produktow w kategorii. -->
+                <td> <!-- Komorka akcji CRUD. -->
+                    <a class="button" href="/categories/#(category.id)">Szczegoly</a> <!-- Link pokazuje szczegoly kategorii. -->
+                    <a class="button" href="/categories/#(category.id)/edit">Edytuj</a> <!-- Link otwiera edycje kategorii. -->
+                    <form method="post" action="/categories/#(category.id)/delete"> <!-- Formularz usuwa kategorie. -->
+                        <button type="submit">Usun</button> <!-- Przycisk usuwa kategorie. -->
+                    </form> <!-- Konczymy formularz usuwania. -->
+                </td> <!-- Konczymy komorke akcji. -->
+            </tr> <!-- Konczymy wiersz kategorii. -->
+            #endfor <!-- Konczymy petle Leaf. -->
+        </tbody> <!-- Konczymy cialo tabeli. -->
+    </table> <!-- Konczymy tabele kategorii. -->
+</body> <!-- Konczymy tresc strony. -->
+</html> <!-- Konczymy dokument HTML. -->

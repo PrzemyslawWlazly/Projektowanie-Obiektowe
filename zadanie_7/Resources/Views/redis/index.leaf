@@ -1,0 +1,21 @@
+<!doctype html> <!-- Deklarujemy dokument HTML5. -->
+<html lang="pl"> <!-- Ustawiamy jezyk strony na polski. -->
+<head> <!-- Sekcja head zawiera metadane. -->
+    <meta charset="utf-8"> <!-- Ustawiamy kodowanie UTF-8. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Ustawiamy responsywnosc strony. -->
+    <title>Redis</title> <!-- Tytul strony Redis. -->
+    <style>body{font-family:Arial,sans-serif;max-width:960px;margin:40px auto;padding:0 20px;line-height:1.5}a{display:inline-block;margin:6px 8px 6px 0;padding:8px 12px;border:1px solid #333;text-decoration:none;color:#111;background:#f4f4f4}pre{white-space:pre-wrap;border:1px solid #ccc;padding:12px;background:#f7f7f7}</style> <!-- Prosty styl podgladu JSON. -->
+</head> <!-- Konczymy sekcje head. -->
+<body> <!-- Rozpoczynamy tresc strony. -->
+    <h1>Dane w Redis</h1> <!-- Naglowek informuje o podgladzie Redis. -->
+    <nav> <!-- Nawigacja prowadzi do innych czesci aplikacji. -->
+        <a href="/">Start</a> <!-- Link wraca na strone glowna. -->
+        <a href="/products">Produkty</a> <!-- Link prowadzi do produktow. -->
+        <a href="/categories">Kategorie</a> <!-- Link prowadzi do kategorii. -->
+        <a href="/redis/products">Surowy JSON</a> <!-- Link pokazuje tekst zapisany w Redis. -->
+    </nav> <!-- Konczymy nawigacje. -->
+    <p><strong>Ostatnia aktualizacja:</strong> #(lastUpdate)</p> <!-- Wyswietlamy czas ostatniego zapisu w Redis. -->
+    <h2>Klucz shop:products:list</h2> <!-- Naglowek wskazuje nazwe klucza Redis. -->
+    <pre>#(productsJSON)</pre> <!-- Pokazujemy dane produktow pobrane z Redis. -->
+</body> <!-- Konczymy tresc strony. -->
+</html> <!-- Konczymy dokument HTML. -->

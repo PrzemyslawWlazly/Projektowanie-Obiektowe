@@ -1,0 +1,20 @@
+<!doctype html> <!-- Deklarujemy dokument HTML5. -->
+<html lang="pl"> <!-- Ustawiamy jezyk strony na polski. -->
+<head> <!-- Sekcja head zawiera metadane strony. -->
+    <meta charset="utf-8"> <!-- Ustawiamy kodowanie znakow na UTF-8. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Ustawiamy poprawne skalowanie na telefonach. -->
+    <title>Sklep Vapor</title> <!-- Tytul widoczny na karcie przegladarki. -->
+    <style>body{font-family:Arial,sans-serif;max-width:960px;margin:40px auto;padding:0 20px;line-height:1.5}nav a,.button{display:inline-block;margin:6px 10px 6px 0;padding:8px 12px;border:1px solid #333;text-decoration:none;color:#111;background:#f4f4f4}table{width:100%;border-collapse:collapse}td,th{border:1px solid #ccc;padding:8px;text-align:left}input,textarea,select{width:100%;padding:8px;margin:4px 0 12px;box-sizing:border-box}</style> <!-- Prosty styl ulatwia czytelne nagranie filmu. -->
+</head> <!-- Konczymy sekcje head. -->
+<body> <!-- Sekcja body zawiera widoczna tresc strony. -->
+    <h1>Sklep w Vaporze</h1> <!-- Naglowek mowi, czego dotyczy aplikacja. -->
+    <p>Aplikacja pokazuje CRUD produktow, szablony Leaf, relacje kategorii i zapis danych w Redis.</p> <!-- Krotki opis pomaga w prezentacji zadania. -->
+    <nav> <!-- Nawigacja prowadzi do najwazniejszych czesci aplikacji. -->
+        <a href="/products">Produkty</a> <!-- Link prowadzi do CRUD produktow. -->
+        <a href="/categories">Kategorie</a> <!-- Link prowadzi do CRUD kategorii. -->
+        <a href="/suppliers">Dostawcy</a> <!-- Link prowadzi do CRUD trzeciego modelu. -->
+        <a href="/redis">Redis</a> <!-- Link prowadzi do podgladu danych z Redis. -->
+        <a href="/api/products">API produkty</a> <!-- Link pokazuje JSON dla etapu 3.0. -->
+    </nav> <!-- Konczymy nawigacje. -->
+</body> <!-- Konczymy widoczna tresc strony. -->
+</html> <!-- Konczymy dokument HTML. -->

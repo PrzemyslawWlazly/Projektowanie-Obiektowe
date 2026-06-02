@@ -1,0 +1,44 @@
+<!doctype html> <!-- Deklarujemy dokument HTML5. -->
+<html lang="pl"> <!-- Ustawiamy jezyk strony na polski. -->
+<head> <!-- Sekcja head zawiera metadane. -->
+    <meta charset="utf-8"> <!-- Ustawiamy kodowanie UTF-8. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Ustawiamy responsywnosc strony. -->
+    <title>Dostawcy</title> <!-- Tytul strony dostawcow. -->
+    <style>body{font-family:Arial,sans-serif;max-width:960px;margin:40px auto;padding:0 20px;line-height:1.5}nav a,.button,button{display:inline-block;margin:4px 6px 4px 0;padding:7px 10px;border:1px solid #333;text-decoration:none;color:#111;background:#f4f4f4;cursor:pointer}table{width:100%;border-collapse:collapse;margin-top:16px}td,th{border:1px solid #ccc;padding:8px;text-align:left}form{display:inline}</style> <!-- Prosty styl tabeli dostawcow. -->
+</head> <!-- Konczymy sekcje head. -->
+<body> <!-- Rozpoczynamy tresc strony. -->
+    <h1>Dostawcy</h1> <!-- Naglowek listy dostawcow. -->
+    <nav> <!-- Nawigacja po aplikacji. -->
+        <a href="/">Start</a> <!-- Link wraca na strone glowna. -->
+        <a href="/suppliers/new">Dodaj dostawce</a> <!-- Link otwiera formularz nowego dostawcy. -->
+        <a href="/products">Produkty</a> <!-- Link prowadzi do produktow. -->
+        <a href="/categories">Kategorie</a> <!-- Link prowadzi do kategorii. -->
+    </nav> <!-- Konczymy nawigacje. -->
+    <table> <!-- Tabela prezentuje dostawcow. -->
+        <thead> <!-- Naglowek tabeli. -->
+            <tr> <!-- Wiersz naglowka. -->
+                <th>Nazwa</th> <!-- Kolumna nazwy dostawcy. -->
+                <th>Email</th> <!-- Kolumna email dostawcy. -->
+                <th>Telefon</th> <!-- Kolumna telefonu dostawcy. -->
+                <th>Akcje</th> <!-- Kolumna akcji CRUD. -->
+            </tr> <!-- Konczymy wiersz naglowka. -->
+        </thead> <!-- Konczymy naglowek tabeli. -->
+        <tbody> <!-- Cialo tabeli zawiera dane z bazy. -->
+            #for(supplier in suppliers): <!-- Leaf powtarza wiersz dla kazdego dostawcy. -->
+            <tr> <!-- Rozpoczynamy wiersz dostawcy. -->
+                <td>#(supplier.name)</td> <!-- Wyswietlamy nazwe dostawcy. -->
+                <td>#(supplier.email)</td> <!-- Wyswietlamy email dostawcy. -->
+                <td>#(supplier.phone)</td> <!-- Wyswietlamy telefon dostawcy. -->
+                <td> <!-- Komorka akcji CRUD. -->
+                    <a class="button" href="/suppliers/#(supplier.id)">Szczegoly</a> <!-- Link pokazuje szczegoly dostawcy. -->
+                    <a class="button" href="/suppliers/#(supplier.id)/edit">Edytuj</a> <!-- Link otwiera edycje dostawcy. -->
+                    <form method="post" action="/suppliers/#(supplier.id)/delete"> <!-- Formularz usuwa dostawce. -->
+                        <button type="submit">Usun</button> <!-- Przycisk usuwa dostawce. -->
+                    </form> <!-- Konczymy formularz usuwania. -->
+                </td> <!-- Konczymy komorke akcji. -->
+            </tr> <!-- Konczymy wiersz dostawcy. -->
+            #endfor <!-- Konczymy petle Leaf. -->
+        </tbody> <!-- Konczymy cialo tabeli. -->
+    </table> <!-- Konczymy tabele dostawcow. -->
+</body> <!-- Konczymy tresc strony. -->
+</html> <!-- Konczymy dokument HTML. -->

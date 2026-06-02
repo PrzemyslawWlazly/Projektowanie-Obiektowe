@@ -1,0 +1,38 @@
+<!doctype html> <!-- Deklarujemy dokument HTML5. -->
+<html lang="pl"> <!-- Ustawiamy jezyk strony na polski. -->
+<head> <!-- Sekcja head zawiera metadane. -->
+    <meta charset="utf-8"> <!-- Ustawiamy kodowanie UTF-8. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Ustawiamy responsywnosc strony. -->
+    <title>#(category.name)</title> <!-- Tytul strony to nazwa kategorii. -->
+    <style>body{font-family:Arial,sans-serif;max-width:960px;margin:40px auto;padding:0 20px;line-height:1.5}a,button{display:inline-block;margin:6px 8px 6px 0;padding:8px 12px;border:1px solid #333;text-decoration:none;color:#111;background:#f4f4f4;cursor:pointer}table{width:100%;border-collapse:collapse;margin-top:16px}td,th{border:1px solid #ccc;padding:8px;text-align:left}form{display:inline}</style> <!-- Prosty styl szczegolow kategorii. -->
+</head> <!-- Konczymy sekcje head. -->
+<body> <!-- Rozpoczynamy tresc strony. -->
+    <h1>#(category.name)</h1> <!-- Wyswietlamy nazwe kategorii. -->
+    <p>#(category.description)</p> <!-- Wyswietlamy opis kategorii. -->
+    <p><strong>Liczba produktow:</strong> #(category.productsCount)</p> <!-- Wyswietlamy liczbe produktow w relacji. -->
+    <a href="/categories">Wroc</a> <!-- Link wraca do listy kategorii. -->
+    <a href="/categories/#(category.id)/edit">Edytuj</a> <!-- Link otwiera edycje kategorii. -->
+    <form method="post" action="/categories/#(category.id)/delete"> <!-- Formularz usuwa kategorie. -->
+        <button type="submit">Usun</button> <!-- Przycisk usuwa kategorie. -->
+    </form> <!-- Konczymy formularz usuwania. -->
+    <h2>Produkty w tej kategorii</h2> <!-- Naglowek listy produktow relacji. -->
+    <table> <!-- Tabela pokazuje produkty powiazane z kategoria. -->
+        <thead> <!-- Naglowek tabeli produktow. -->
+            <tr> <!-- Wiersz naglowka tabeli. -->
+                <th>Nazwa</th> <!-- Kolumna nazwy produktu. -->
+                <th>Cena</th> <!-- Kolumna ceny produktu. -->
+                <th>Magazyn</th> <!-- Kolumna stanu magazynowego. -->
+            </tr> <!-- Konczymy wiersz naglowka. -->
+        </thead> <!-- Konczymy naglowek tabeli. -->
+        <tbody> <!-- Cialo tabeli produktow. -->
+            #for(product in products): <!-- Leaf powtarza produkty nalezace do kategorii. -->
+            <tr> <!-- Rozpoczynamy wiersz produktu. -->
+                <td><a href="/products/#(product.id)">#(product.name)</a></td> <!-- Nazwa produktu prowadzi do szczegolow. -->
+                <td>#(product.price)</td> <!-- Wyswietlamy cene produktu. -->
+                <td>#(product.stock)</td> <!-- Wyswietlamy stan magazynowy. -->
+            </tr> <!-- Konczymy wiersz produktu. -->
+            #endfor <!-- Konczymy petle produktow. -->
+        </tbody> <!-- Konczymy cialo tabeli. -->
+    </table> <!-- Konczymy tabele produktow. -->
+</body> <!-- Konczymy tresc strony. -->
+</html> <!-- Konczymy dokument HTML. -->
