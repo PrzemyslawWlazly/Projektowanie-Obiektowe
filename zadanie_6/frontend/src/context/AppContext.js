@@ -15,7 +15,7 @@ const normalizeProduct = (product) => { // Normalizujemy dane z API, aby kompone
   const price = Number(product.price); // Zamieniamy cenę na liczbę, bo dane z serwera mogą przyjść jako tekst.
 
   if (!Number.isFinite(price)) { // Chronimy renderowanie przed wywołaniem toFixed na niepoprawnej wartości.
-    throw new Error('Produkt z serwera ma niepoprawną cenę.');
+    throw new TypeError('Produkt z serwera ma niepoprawną cenę.');
   } // Kończymy walidację ceny.
 
   return { // Zwracamy bezpieczny obiekt produktu używany dalej w UI.
@@ -38,7 +38,7 @@ export const AppProvider = ({ children }) => { // Definiujemy provider udostępn
     try { // Rozpoczynamy blok obsługi poprawnej odpowiedzi backendu.
       const response = await apiClient.get('/api/products'); // Pobieramy produkty z endpointu backendowego przy użyciu axios.
       if (!Array.isArray(response.data)) { // Sprawdzamy, czy backend zwrócił listę, a nie przypadkowy obiekt.
-        throw new Error('Endpoint produktów nie zwrócił listy.');
+        throw new TypeError('Endpoint produktów nie zwrócił listy.');
       } // Kończymy walidację kształtu odpowiedzi.
 
       setProducts(response.data.map(normalizeProduct)); // Zapisujemy tylko znormalizowane produkty zwrócone przez aplikację serwerową.
