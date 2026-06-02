@@ -215,3 +215,46 @@ Poprawki:
 ❌ **4.5 Należy usunąć problemy typu Code Smell w kodzie w Sonarze (kotlin, go, js). Należy dodać badge z Sonara**  
 
 ❌ **5.0 Skonfigurować Github Actions z linterem oraz CodeQL**  
+
+
+
+
+--------------------------
+
+## Zadanie 7: Vapor + Leaf + Fluent + Redis
+
+[Link do głównego folderu projektu](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/tree/main/zadanie_7)
+
+✅ **3.0 Należy stworzyć kontroler wraz z modelem Produktów zgodny z CRUD w ORM Fluent**
+* [Model produktu: Product.swift](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_7/Sources/App/Models/Product.swift)
+* [Migracja produktu: CreateProduct.swift](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_7/Sources/App/Migrations/CreateProduct.swift)
+* [Kontroler produktów: ProductsController.swift](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_7/Sources/App/Controllers/ProductsController.swift)
+
+✅ **3.5 Należy stworzyć szablony w Leaf**
+* [Strona główna Leaf: home.leaf](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_7/Resources/Views/home.leaf)
+* [Widoki produktów Leaf](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/tree/main/zadanie_7/Resources/Views/products)
+* [Widok listy produktów: index.leaf](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_7/Resources/Views/products/index.leaf)
+* [Formularz produktu: form.leaf](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_7/Resources/Views/products/form.leaf)
+* [Widok szczegółów produktu: show.leaf](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_7/Resources/Views/products/show.leaf)
+
+✅ **4.0 Należy stworzyć drugi model oraz kontroler Kategorii wraz z relacją**
+* [Model kategorii: Category.swift](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_7/Sources/App/Models/Category.swift)
+* [Migracja kategorii: CreateCategory.swift](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_7/Sources/App/Migrations/CreateCategory.swift)
+* [Migracja relacji produktu z kategorią: AddCategoryToProduct.swift](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_7/Sources/App/Migrations/AddCategoryToProduct.swift)
+* [Kontroler kategorii: CategoriesController.swift](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_7/Sources/App/Controllers/CategoriesController.swift)
+* [Widoki kategorii Leaf](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/tree/main/zadanie_7/Resources/Views/categories)
+
+✅ **Dodatkowo: trzeci model wymagany w treści zadania**
+* [Model dostawcy: Supplier.swift](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_7/Sources/App/Models/Supplier.swift)
+* [Migracja dostawcy: CreateSupplier.swift](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_7/Sources/App/Migrations/CreateSupplier.swift)
+* [Kontroler dostawców: SuppliersController.swift](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_7/Sources/App/Controllers/SuppliersController.swift)
+* [Widoki dostawców Leaf](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/tree/main/zadanie_7/Resources/Views/suppliers)
+
+✅ **4.5 Należy wykorzystać Redis do przechowywania danych**
+* [Konfiguracja Redis w aplikacji: configure.swift](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_7/Sources/App/configure.swift)
+* [Zapis produktów do Redis: ProductsController.swift](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_7/Sources/App/Controllers/ProductsController.swift)
+* [Kontroler podglądu danych Redis: RedisController.swift](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_7/Sources/App/Controllers/RedisController.swift)
+* [Widok danych Redis: redis/index.leaf](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_7/Resources/Views/redis/index.leaf)
+
+❌ **5.0 Wrzucić aplikację na Heroku**
+* *(Nie zrealizowano)*
