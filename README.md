@@ -174,4 +174,44 @@ Zadanie 5 Wzorce behawioralne - React JavaScript/TypeScript
 [PObiekt_zest5.webm](https://github.com/user-attachments/assets/8b4ff783-b35d-4674-8110-3292684d322a)
 
 
+------------------------------
+# Zadanie 6 - Zapaszki
 
+[Link do głównego folderu zadania 6](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/tree/main/zadanie_6)
+
+Projekt bazuje na aplikacji z `zadanie_5`. W ramach tego zestawu przygotowano konfigurację pre-commit oraz poprawiono problemy wykryte przez Sonar w kodzie aplikacji klienckiej i w plikach wspierających uruchomienie projektu.
+
+## Spełnione wymagania
+
+✅ **3.0 Należy skonfigurować husky + lint-staged uruchamianie lintowania przed commitem**  
+[kod rozwiązania: package.json](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_6/frontend/package.json), [package-lock.json](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_6/frontend/package-lock.json), [pre-commit](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_6/frontend/.husky/pre-commit)
+
+✅ **3.5 Należy wyeliminować wszystkie bugi w kodzie w Sonarze (kod aplikacji klienckiej)**  
+[kod rozwiązania: go.sum](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_6/backend/go.sum), [main.go](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_6/backend/main.go), [App.test.js](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_6/frontend/src/App.test.js), [AppContext.js](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_6/frontend/src/context/AppContext.js), [Payments.js](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_6/frontend/src/components/Payments.js), [reportWebVitals.js](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_6/frontend/src/reportWebVitals.js), [Cart.js](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zadanie_6/frontend/src/components/Cart.js)
+
+Poprawki:
+- dodano `backend/go.sum`, aby wersje zależności Go były przewidywalne,
+- usunięto logowanie danych kontrolowanych przez użytkownika w `backend/main.go`,
+- dodano walidację propsów w mockach React Routera w `frontend/src/App.test.js`,
+- dodano walidację `children` w `frontend/src/context/AppContext.js`,
+- zastąpiono `role="status"` elementem `output` w `frontend/src/components/Payments.js`,
+- zastąpiono `instanceof Function` bezpieczniejszym sprawdzeniem `typeof` w `frontend/src/reportWebVitals.js`,
+- zastąpiono ogólne `new Error()` przez `new TypeError()` przy błędach walidacji typu danych,
+- dodano normalizację danych produktów z API przed zapisaniem ich w stanie Reacta,
+- zastąpiono usuwanie pozycji koszyka po indeksie stabilnym identyfikatorem pozycji.
+
+
+
+<img width="908" height="659" alt="Screenshot from 2026-06-02 14-25-32" src="https://github.com/user-attachments/assets/409ee6b1-0017-4269-85c1-521f36721c4b" />
+<img width="908" height="659" alt="Screenshot from 2026-06-02 14-24-39" src="https://github.com/user-attachments/assets/0b3abf87-a0fa-49a8-997d-19913d996213" />
+
+
+
+
+
+
+❌ **4.0 Przeskanować oraz naprawić dowolny projekt open source narzędziem CodeQL**  
+
+❌ **4.5 Należy usunąć problemy typu Code Smell w kodzie w Sonarze (kotlin, go, js). Należy dodać badge z Sonara**  
+
+❌ **5.0 Skonfigurować Github Actions z linterem oraz CodeQL**  
