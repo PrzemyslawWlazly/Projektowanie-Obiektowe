@@ -1,0 +1,118 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  background: #f7f7fb;
+  color: #202124;
+}
+
+nav,
+section {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0;
+  list-style: none;
+}
+
+.form-page {
+  max-width: 520px;
+}
+
+.account-form {
+  display: grid;
+  gap: 10px;
+}
+
+.account-form input {
+  min-height: 38px;
+  padding: 8px 10px;
+  border: 1px solid #b8bdc7;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.account-form input[type='checkbox'] {
+  min-height: auto;
+  width: 18px;
+  height: 18px;
+}
+
+.account-form input:invalid {
+  border-color: #b3261e;
+}
+
+.account-form button {
+  width: fit-content;
+  min-height: 40px;
+  padding: 8px 14px;
+  border: 0;
+  border-radius: 6px;
+  background: #145c9e;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.settings-summary {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 8px 14px;
+  margin-top: 18px;
+}
+
+.settings-summary dt {
+  font-weight: 700;
+}
+
+.settings-summary dd {
+  margin: 0;
+}
