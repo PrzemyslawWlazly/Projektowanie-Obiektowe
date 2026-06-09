@@ -1,0 +1,45 @@
+name: Zestaw 9 - Build
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "zestaw_9/**"
+      - ".github/workflows/zestaw9-build.yml"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "zestaw_9/**"
+      - ".github/workflows/zestaw9-build.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: zestaw9-build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build Docker images
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate Docker Compose configuration
+        run: docker compose -f zestaw_9/docker-compose.yml config
+
+      - name: Build backend image
+        run: docker build --tag zestaw9-backend:ci zestaw_9/backend
+
+      - name: Build frontend image
+        run: |
+          docker build \
+            --build-arg REACT_APP_API_URL=https://zestaw9-backend.onrender.com \
+            --tag zestaw9-frontend:ci \
+            zestaw_9/frontend
