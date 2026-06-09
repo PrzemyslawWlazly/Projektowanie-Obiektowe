@@ -177,6 +177,12 @@ Zadanie 5 Wzorce behawioralne - React JavaScript/TypeScript
 ------------------------------
 # Zadanie 6 - Zapaszki
 
+
+
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=PrzemyslawWlazly_Projektowanie-Obiektowe&metric=bugs)](https://sonarcloud.io/dashboard?id=PrzemyslawWlazly_Projektowanie-Obiektowe)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=PrzemyslawWlazly_Projektowanie-Obiektowe&metric=code_smells)](https://sonarcloud.io/dashboard?id=PrzemyslawWlazly_Projektowanie-Obiektowe)
+
+
 [Link do głównego folderu zadania 6](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/tree/main/zadanie_6)
 
 Projekt bazuje na aplikacji z `zadanie_5`. W ramach tego zestawu przygotowano konfigurację pre-commit oraz poprawiono problemy wykryte przez Sonar w kodzie aplikacji klienckiej i w plikach wspierających uruchomienie projektu.
