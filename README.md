@@ -298,3 +298,38 @@ Poprawki:
 
 [Pr_Obiektowe_zest_chromium_45.webm](https://github.com/user-attachments/assets/1beebcd3-5964-479d-9943-ecff5c3784d4)
 
+
+-----------------------
+
+
+## Zadanie 9: Chmura, Docker i GitHub Actions
+
+[Link do głównego folderu projektu](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/tree/main/zestaw_9)
+
+✅ **3.0 Należy stworzyć odpowiednie instancje po stronie chmury na Dockerze**
+* [Konfiguracja Docker Compose](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zestaw_9/docker-compose.yml)
+* [Dockerfile aplikacji serwerowej](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zestaw_9/backend/Dockerfile)
+* [Kod aplikacji serwerowej przygotowany do działania w chmurze](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zestaw_9/backend/main.go)
+* [Dockerfile aplikacji klienckiej](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zestaw_9/frontend/Dockerfile)
+* [Konfiguracja serwera Nginx](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/zestaw_9/frontend/nginx.conf)
+* [Uruchomiona aplikacja serwerowa na Render](https://zestaw9-backend.onrender.com/api/products)
+* [Uruchomiona aplikacja kliencka na Render](https://zestaw9-frontend.onrender.com)
+
+✅ **3.5 Stworzyć odpowiedni pipeline w GitHub Actions do budowania aplikacji**
+* [Pipeline budujący obrazy Docker aplikacji klienckiej i serwerowej](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/.github/workflows/zestaw9-build.yml)
+* [Historia uruchomień GitHub Actions](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/actions/workflows/zestaw9-build.yml)
+
+✅ **4.0 Dodać notyfikację mailową o zbudowaniu aplikacji**
+* [Konfiguracja powiadomienia e-mail w GitHub Actions](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/.github/workflows/zestaw9-build.yml)
+* Dane logowania do serwera SMTP są przechowywane bezpiecznie jako sekrety repozytorium GitHub: `MAIL_USERNAME`, `MAIL_PASSWORD` oraz `MAIL_TO`.
+
+✅ **4.5 Dodać krok z deploymentem aplikacji serwerowej oraz klienckiej na chmurę**
+* [Kroki deploymentu backendu i frontendu na Render](https://github.com/PrzemyslawWlazly/Projektowanie-Obiektowe/blob/main/.github/workflows/zestaw9-build.yml)
+* Deployment jest uruchamiany po poprawnym zbudowaniu aplikacji za pomocą Render Deploy Hooks.
+* Adresy hooków są przechowywane jako sekrety `RENDER_BACKEND_DEPLOY_HOOK` oraz `RENDER_FRONTEND_DEPLOY_HOOK`.
+* [Wdrożony backend](https://zestaw9-backend.onrender.com/api/products)
+* [Wdrożony frontend](https://zestaw9-frontend.onrender.com)
+
+❌ **5.0 Dodać uruchomienie regresyjnych testów automatycznych (funkcjonalnych) jako krok w Actions**
+* Punkt nie został zrealizowany.
+
