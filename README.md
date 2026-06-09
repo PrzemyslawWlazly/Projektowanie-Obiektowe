@@ -178,6 +178,7 @@ Zadanie 5 Wzorce behawioralne - React JavaScript/TypeScript
 # Zadanie 6 - Zapaszki
 
 
+#Pniższy licznik pokazuje bugs i code-smells dla całego katalogu Projektowanie-Obiektowe (nie dla realizowanego zadania)
 
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=PrzemyslawWlazly_Projektowanie-Obiektowe&metric=bugs)](https://sonarcloud.io/dashboard?id=PrzemyslawWlazly_Projektowanie-Obiektowe)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=PrzemyslawWlazly_Projektowanie-Obiektowe&metric=code_smells)](https://sonarcloud.io/dashboard?id=PrzemyslawWlazly_Projektowanie-Obiektowe)
